@@ -1,4 +1,4 @@
-﻿namespace NotePadWF_CS
+﻿namespace NotepadMinimal
 {
     partial class AboutBox1
     {

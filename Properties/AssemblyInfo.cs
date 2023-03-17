@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle(".NETpad")]
-[assembly: AssemblyDescription("A Notepad replacement written in C#, .NET Framework 4.7x, and Windows Forms")]
+[assembly: AssemblyTitle("NotepadMinimal")]
+[assembly: AssemblyDescription("Clone of Notepad (based on .NETped repo by Paul Thurrott) made with mission to restore its original spirit of minimalism")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Paul Thurrott")]
-[assembly: AssemblyProduct(".NETpad")]
-[assembly: AssemblyCopyright("Copyright © 2022 Paul Thurrott")]
+[assembly: AssemblyCompany("dupop")]
+[assembly: AssemblyProduct("NotepadMinimal")]
+[assembly: AssemblyCopyright("Copyright © 2022 dupop, see also copyright of .NETped code base")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

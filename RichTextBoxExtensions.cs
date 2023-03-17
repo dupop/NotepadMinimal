@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace NotePadWF_CS
+namespace NotepadMinimal
 {
     internal static class RichTextBoxExtensions
     {

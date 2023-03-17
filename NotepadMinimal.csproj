@@ -11,8 +11,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{51B89A06-401B-487A-9705-FB616005FCD8}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>NotePadWF_CS</RootNamespace>
-    <AssemblyName>.NETpad</AssemblyName>
+    <RootNamespace>NotepadMinimal</RootNamespace>
+    <AssemblyName>NotepadMinimal</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -77,7 +77,7 @@
     <ApplicationIcon>Hopstarter-Sleek-Xp-Software-Notepad.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>NotePadWF_CS.Program</StartupObject>
+    <StartupObject>NotepadMinimal.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.VisualBasic" />
@@ -123,6 +123,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.manifest" />
     <None Include="NotePadWF-CS_TemporaryKey.pfx" />

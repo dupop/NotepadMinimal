@@ -5,7 +5,7 @@ using System.IO;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 
-namespace NotePadWF_CS
+namespace NotepadMinimal
 {
     public partial class Form1 : Form
     {

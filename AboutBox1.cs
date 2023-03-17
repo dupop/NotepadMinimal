@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace NotePadWF_CS
+namespace NotepadMinimal
 {
     partial class AboutBox1 : Form
     {
