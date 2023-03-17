@@ -18,4 +18,14 @@ This project is a fork of ([.NETpad project](https://github.com/thurrott/Notepad
 Remaning work will be done by ([@dupop](https://github.com/dupop)) - a huge fan of classic Microsoft Notepad.
 
 
+**Progress**
+
+- Adding context menu strip - Done
+- Disabling of menu itmes and context menu items - TBD
+- Reimplementing delete button to work same as in Notepad - TBD
+- Changing autosave option to use a backup file and not to owerwrite the original one without confirmation - TBD
+- Refactoring - extracting classes if possible to reduce size of Form1 class which holds the whole implementation - TBD
+
+
+
 ![.NETpad hero image](/graphics/hero.jpg)
