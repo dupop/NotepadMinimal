@@ -4,7 +4,7 @@
 
 Notepad Minimal is a remake of classic and legendary Microsoft Notepad made with mission to restore its original spirit of minimalism.
 
-Most important benefit of minimalism of old-school Notepad was possibility to work without distractions comming from non-essential features. This provides a possibility to use it e.g. for quickly taking notes or for making draft plans.
+Most important benefit of minimalism of old-school Notepad was possibility to work without distractions coming from non-essential features. This provides a possibility to use it e.g. for quickly taking notes or for making draft plans.
 
 **Credits**
 
