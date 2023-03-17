@@ -400,6 +400,11 @@ namespace NotepadMinimal
 
         private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Paste();
+        }
+
+        private void Paste()
+        {
             if (Clipboard.ContainsText(TextDataFormat.Text))
             {
                 richTextBox1.SelectedText = Clipboard.GetText(TextDataFormat.Text);
@@ -759,6 +764,36 @@ namespace NotepadMinimal
             }
             else
                 MessageBox.Show("Cannot find '" + FindTextString + "'", Application.ProductName, MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void undoContextMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Undo();
+        }
+
+        private void cutContextMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Cut();
+        }
+
+        private void copyContextMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Copy();
+        }
+
+        private void pasteContextMenuItem_Click(object sender, EventArgs e)
+        {
+            Paste();
+        }
+
+        private void deleteContextMenuItem_Click(object sender, EventArgs e)
+        {
+            SendKeys.Send("{DEL}");
+        }
+
+        private void selectAllContextMenuItem_Click(object sender, EventArgs e)
+        {
+            richTextBox1.SelectAll();
         }
     }
 }

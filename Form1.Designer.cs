@@ -94,6 +94,14 @@
             this.toolStripStatusLabel4 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.undoContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.cutContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.copyContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pasteContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
@@ -102,8 +110,10 @@
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.selectAllContextMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -647,15 +657,80 @@
             // 
             this.richTextBox1.BackColor = System.Drawing.SystemColors.Window;
             this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.ContextMenuStrip = this.contextMenu;
             this.richTextBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.richTextBox1.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.richTextBox1.Location = new System.Drawing.Point(0, 24);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(1);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(800, 360);
             this.richTextBox1.TabIndex = 2;
             this.richTextBox1.Text = "";
             this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.undoContextMenuItem,
+            this.toolStripSeparator7,
+            this.cutContextMenuItem,
+            this.copyContextMenuItem,
+            this.pasteContextMenuItem,
+            this.deleteContextMenuItem,
+            this.toolStripSeparator8,
+            this.selectAllContextMenuItem});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(181, 170);
+            // 
+            // undoContextMenuItem
+            // 
+            this.undoContextMenuItem.Name = "undoContextMenuItem";
+            this.undoContextMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
+            this.undoContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.undoContextMenuItem.Text = "&Undo";
+            this.undoContextMenuItem.Click += new System.EventHandler(this.undoContextMenuItem_Click);
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(177, 6);
+            // 
+            // cutContextMenuItem
+            // 
+            this.cutContextMenuItem.Name = "cutContextMenuItem";
+            this.cutContextMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.cutContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cutContextMenuItem.Text = "Cu&t";
+            this.cutContextMenuItem.Click += new System.EventHandler(this.cutContextMenuItem_Click);
+            // 
+            // copyContextMenuItem
+            // 
+            this.copyContextMenuItem.Name = "copyContextMenuItem";
+            this.copyContextMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
+            this.copyContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.copyContextMenuItem.Text = "&Copy";
+            this.copyContextMenuItem.Click += new System.EventHandler(this.copyContextMenuItem_Click);
+            // 
+            // pasteContextMenuItem
+            // 
+            this.pasteContextMenuItem.Name = "pasteContextMenuItem";
+            this.pasteContextMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.pasteContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.pasteContextMenuItem.Text = "&Paste";
+            this.pasteContextMenuItem.Click += new System.EventHandler(this.pasteContextMenuItem_Click);
+            // 
+            // deleteContextMenuItem
+            // 
+            this.deleteContextMenuItem.Name = "deleteContextMenuItem";
+            this.deleteContextMenuItem.ShortcutKeyDisplayString = "Del";
+            this.deleteContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteContextMenuItem.Text = "De&lete";
+            this.deleteContextMenuItem.Click += new System.EventHandler(this.deleteContextMenuItem_Click);
+            // 
+            // toolStripSeparator8
+            // 
+            this.toolStripSeparator8.Name = "toolStripSeparator8";
+            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
             // 
             // saveFileDialog1
             // 
@@ -689,6 +764,14 @@
             this.timer1.Interval = 30000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // selectAllContextMenuItem
+            // 
+            this.selectAllContextMenuItem.Name = "selectAllContextMenuItem";
+            this.selectAllContextMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.selectAllContextMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.selectAllContextMenuItem.Text = "Select &All";
+            this.selectAllContextMenuItem.Click += new System.EventHandler(this.selectAllContextMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -699,7 +782,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(1, 1, 1, 1);
+            this.Margin = new System.Windows.Forms.Padding(1);
             this.MinimumSize = new System.Drawing.Size(419, 144);
             this.Name = "Form1";
             this.Text = "NotepadMinimal";
@@ -709,6 +792,7 @@
             this.menuStrip1.PerformLayout();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            this.contextMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -788,6 +872,15 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripSpacer3;
         private System.Windows.Forms.ToolStripStatusLabel toolStripSpacer2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripSpacer1;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem undoContextMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator7;
+        private System.Windows.Forms.ToolStripMenuItem cutContextMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem copyContextMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem pasteContextMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteContextMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
+        private System.Windows.Forms.ToolStripMenuItem selectAllContextMenuItem;
     }
 }
 
