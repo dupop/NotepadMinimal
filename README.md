@@ -28,9 +28,9 @@ Low prio:
 This project is a fork of ([.NETpad project](https://github.com/thurrott/NotepadWF-CS)) created by Paul Thurrott ([@thurrott](https://www.twitter.com/thurrott)) with the help of Rafael Rivera ([@withinrafael](https://www.twitter.com/withinrafael)), several outside contributors, and, thanks to his books, Charles Petzold.
 .NETpad project was most close to classic Microsoft Notepad from the avilable GitHub projects, so it was selected as a development base for this project.
 
-**:heart: Many thanks for Paul, Rafael and other contributors of .NETpad for investing time to make emulation of most of standard Notepad features!**
+**:heart: Many thanks for Paul, Rafael and other contributors of .NETpad for investing time to make emulation of most of standard Notepad features which are used in this project!**
 
-**:heart: Many thanks for Microsoft for providing such a great and stable application.**
+**:heart: Many thanks for Microsoft for making the Microsoft Notepad - such a great and stable application which was the inspiration for this project.**
 
 Remaning work will be done by ([@dupop](https://github.com/dupop)) - a huge fan of classic Microsoft Notepad.
 
